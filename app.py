@@ -11,7 +11,7 @@ st.set_page_config(
 )
 
 # 2. LOAD MODEL & FITUR AI
-@st.cache_resource # Gunakan cache agar model tidak di-load berulang kali
+@st.cache_resource
 def load_ai_model():
     model = joblib.load('model_rf_sukabumi.pkl')
     fitur_cols = joblib.load('kolom_fitur.pkl')
